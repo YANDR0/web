@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <style>
+            h1{
+                color: orange;
+                text-align: center;
+                text-decoration: line-through;
+
+            }
+
+            ul{
+                list-style-type: none;
+            }
+
+            form{
+                color: blue;
+            }
+
+            [class*=espaciado]{
+                letter-spacing: 20px;
+                
+            }
+
+            [class*=centrado]{
+                text-align: center;
+            }
+
+            [class*=grande]{
+                font-size: 30px;
+            }
+
+            [class*="azul"]{
+                background-color: beige;
+                color:aqua;
+            }
+
+            [class*=curvo]{
+                font-style: italic;
+            }
+
+            [class*=sombreado]{
+                text-shadow: 2px 2px;
+            }
+
+            [class*=subrayado]{
+                text-decoration: underline;
+            }
+
+            
+            input[obligatorio]{
+                border-color: red;
+            }
+
+            .redondo{
+                border-radius: 10px;
+            }
+
+            .remarcado{
+                border-color: blue;
+                padding: 10px;
+            }
+
+            button{
+                padding: 20px;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+            }
+
+            input[type="checkbox"]:checked{
+                box-shadow: 0 0 0 3px orange;
+            }
+            
+
+        </style>
+        <meta charset = "utf-8">
+        <title>Pagina</title>
+    </head>
+
+    <body>
+        <h1>Prueba de Ejercicio</h1>
+
+        <ul>
+            <li class="espaciado">Elemento 1</li>
+            <li class="azul centrado">Elemento 2</li>
+            <li class="curvo grande">Elemento 3</li>
+            <li class="azul">Elemento 4</li>
+            <li class="centrado sombreado">Elemento 5</li>
+            <li class="azul grande subrayado">Elemento 6</li>
+            <li>Elemento 7</li>
+        </ul>
+
+        <form>
+            Campo 1:
+            <input type="text" obligatorio><br>
+            Campo 2:
+            <input type="text" class="redondo"><br>
+            Campo 3:
+            <input type="text" class="remarcado"><br>
+            <button>BOTÓN</button>
+        </form>
+        <br>
+
+        <input type="checkbox">CHECKBOX
+
+
+    </body>
+
+</html>
