@@ -54,12 +54,35 @@ function promises(){
 
 }
 
-function async(){
+function asin(){
+
+    function timer(time){
+        return new Promise((resolve, reject) => setTimeout(a => resolve(), time));
+    }
+
+    async function asinHola(){
+        for (let i = 1; i <= 10; i++) {
+            let wait = await timer(1000);
+            console.log("Hola " + i);
+        }
+        console.log("FIN")
+    }
+
+    async function asinMundo(){
+        for (let i = 1; i <= 5; i++) {
+            let wait = await timer(2000);
+            console.log("Mundo " + i);
+        }
+        
+    }
+
+    asinHola();
+    asinMundo();
 
 }
 
 
 //callbacks()
 //promises()
-//async()
+//asin()
 
