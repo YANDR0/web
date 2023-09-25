@@ -8,17 +8,17 @@ let calis = [
 ]
 
 let Aprobado = (grupo, promedio) => {
-    console.log("El grupo", grupo, "aprobó con un promedio de:", promedio)
+    console.log("El grupo", grupo, "aprobó con un promedio de:", promedio);
 };
 
 let Reprobado = (grupo, promedio) => {
-    console.log("El grupo", grupo, "reprobó con un promedio de:", promedio)
+    console.log("El grupo", grupo, "reprobó con un promedio de:", promedio);
 };
 
 let Promedio = (array) => {
     total = 0
     for(j = 0; j < array.length; j++)
-        total += array[j]
+        total += array[j];
     return total / array.length;
 }
 
