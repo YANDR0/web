@@ -12,6 +12,11 @@ function  callbacks(){
         if(i < 5) setTimeout(timeMundo, 2000, i);
     }, 2000, 0);
 
+    //FUNCIONES Y CONDICIONES
+    setTimeout(function fin() { 
+        if(++i < 5) setTimeout(fin, 1000);
+    }, 2000, 0);
+
 }
 
 function promises(){
@@ -34,23 +39,23 @@ function promises(){
         })
     }
 
-    promiseMundo(1)
-    .then(r => promiseMundo(r))
-    .then(r => promiseMundo(r))
-    .then(r => promiseMundo(r))
-    .then(r => promiseMundo(r));
-
-    promiseHola(1)
-    .then(r => promiseHola(r))
-    .then(r => promiseHola(r))
-    .then(r => promiseHola(r))
-    .then(r => promiseHola(r))
-    .then(r => promiseHola(r))
-    .then(r => promiseHola(r))
-    .then(r => promiseHola(r))
-    .then(r => promiseHola(r))
-    .then(r => promiseHola(r))
-    .then(r => console.log("FIN"));
+    Promise.all([
+        promiseMundo(1)
+        .then(r => promiseMundo(r))
+        .then(r => promiseMundo(r))
+        .then(r => promiseMundo(r))
+        .then(r => promiseMundo(r)),
+        promiseHola(1)
+        .then(r => promiseHola(r))
+        .then(r => promiseHola(r))
+        .then(r => promiseHola(r))
+        .then(r => promiseHola(r))
+        .then(r => promiseHola(r))
+        .then(r => promiseHola(r))
+        .then(r => promiseHola(r))
+        .then(r => promiseHola(r))
+        .then(r => promiseHola(r))
+    ]).then(()=> console.log("FIN"));
 
 }
 
@@ -65,7 +70,6 @@ function asin(){
             let wait = await timer(1000);
             console.log("Hola " + i);
         }
-        console.log("FIN")
     }
 
     async function asinMundo(){
@@ -73,16 +77,17 @@ function asin(){
             let wait = await timer(2000);
             console.log("Mundo " + i);
         }
-        
     }
-
-    asinHola();
-    asinMundo();
+    
+    Promise.all([
+        asinHola(),
+        asinMundo()
+        ]).then(()=> console.log("FIN"));
 
 }
 
 
 //callbacks()
-//promises()
+promises()
 //asin()
 
