@@ -1,21 +1,25 @@
 
+
 function  callbacks(){
+
+    let banderaHola = false, banderaMundo = false; 
 
     setTimeout(function timeHola(i) { 
         console.log("Hola " + ++i);
         if(i < 10) setTimeout(timeHola, 1000, i);
-        else console.log("FIN ");
+        else banderaHola = true;
     }, 1000, 0);
 
     setTimeout(function timeMundo(i) { 
         console.log("Mundo " + ++i);
         if(i < 5) setTimeout(timeMundo, 2000, i);
+        else banderaMundo = true;
     }, 2000, 0);
 
-    //FUNCIONES Y CONDICIONES
     setTimeout(function fin() { 
-        if(++i < 5) setTimeout(fin, 1000);
-    }, 2000, 0);
+        if(!(banderaHola && banderaMundo)) setTimeout(fin, 1000);
+        else console.log("FIN ");
+    }, 1000, 0);
 
 }
 
@@ -87,7 +91,7 @@ function asin(){
 }
 
 
-//callbacks()
-promises()
+callbacks()
+//promises()
 //asin()
 
