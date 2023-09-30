@@ -1,5 +1,4 @@
 
-//QUE NO SE TE OLVIDE QUE TENEMOS QUE MODIFICAR ESTO PA QUE QUEDE BIEN, PENDEJO
 
 class ShoppingCartException {
     constructor(error){
@@ -67,8 +66,9 @@ class ShoppingCart{
 
         let index = this.arrProxys.findIndex(item => item.productUuid == productUuid);
         if(index < 0){
+            this.arrProducts.push(globalProductList.getProductById(productUuid));
             this.arrProxys.push(new ProductProxy(productUuid, amount));
-            return;
+            return true;
         }
             
         this.arrProxys[index].quantity += amount;
@@ -81,11 +81,12 @@ class ShoppingCart{
 
         let index = this.arrProxys.findIndex(item => item.productUuid == productUuid);
         if(index < 0)
-            return;
+            return false;
 
         if(newAmount == 0){
+            this.arrProducts.splice(index,1);
             this.arrProxys.splice(index,1);
-            return;
+            return true;
         }
 
         this.arrProxys[index].quantity = newAmount;
@@ -94,15 +95,15 @@ class ShoppingCart{
     removeItem(productUuid){
         let index = this.arrProxys.findIndex(item => item.productUuid == productUuid);
         if(index < 0)
-            return;
+            return false;
+        this.arrProducts.splice(index,1);
         this.arrProxys.splice(index,1);
     }
 
     calculateTotal(){
-        //TENGO QUE MODIFICAR TODOS ESTOS PARA A LA VEZ AGREGAR UN PRODUCTO A LA OTRA LISTA
         let total = 0;
         for (let i = 0; i < this.arrProxys.length; i++) {
-            total += 1 * this.arrProxys[i].quantity;
+            total += this.arrProducts[i].pricePerUnit * this.arrProxys[i].quantity;
         }
         return total;
     }
@@ -112,13 +113,11 @@ class ShoppingCart{
 
 /*
 let coso = new ShoppingCart();
-coso.addItem(1,10);
-coso.addItem(2,10);
-coso.addItem(3,10);
-coso.addItem(4,10);
-coso.addItem(5,10);
+
 
 function imprimir(coso){
     console.table(coso.arrProxys);
+    console.table(coso.arrProducts);
 }
 */
+
