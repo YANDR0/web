@@ -1,4 +1,5 @@
 
+//QUE NO SE TE OLVIDE QUE TENEMOS QUE MODIFICAR ESTO PA QUE QUEDE BIEN, PENDEJO
 
 class ShoppingCartException {
     constructor(error){
@@ -51,11 +52,11 @@ class ShoppingCart{
 
     //GETTERS
     get getArrProxy(){
-        return this.arrProxys;
+        return this.arrProxys.slice();
     }
 
     get getArrProduct(){
-        return this.arrProducts;
+        return this.arrProducts.slice();
     }
 
     //FUNCTIONS

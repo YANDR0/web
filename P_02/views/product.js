@@ -1,7 +1,4 @@
 
-//import {generateUUID} from "./utils.js";
-
-
 
 class ProductExeption {
     constructor(error){
@@ -9,20 +6,6 @@ class ProductExeption {
     }
 }
 
-
-function checkString(value){
-    if(typeof(value) !== "string")
-        throw new ProductExeption("Value is not an string");
-    if(value == "")
-        throw new ProductExeption("Value is an empty string");
-}
-
-function checkNumber(value){
-    if(typeof(value) !== "number")
-        throw new ProductExeption("Value is not a number");
-    if(value < 0)
-        throw new ProductExeption("Value is a negative");
-}
 
 class Product {
 
