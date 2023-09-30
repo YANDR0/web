@@ -60,25 +60,29 @@ class ProductList{
             this.productArray.splice(index, 1);
     }
 
+    findProduct(query){
+        if(typeof(query) !== "string" || query == "") 
+            return false;
+
+        let clear = query.replace( /[<>]/g,"");
+        clear = clear.split(":");
+
+        let result = this.getProducts();
+        result = clear.length > 1? result.filter(item => item.category == clear[0]): result;
+        result = clear[1] != ""? result.filter(item => item.title == clear[clear.length-1]): result;
+        console.table(result);
+        return result;
+    }
+
+    //SHOW
+    show(){
+        console.table(this.productArray);
+    }
+
 }
 
-
+// GLOBAL LIST
 var globalProductList = new ProductList();
 
-/*
-a = new Product("a");
-b = new Product("b");
-c = new Product("c");
-d = new Product("d");
-e = new Product("e");
 
-globalProductList.createProduct(a);
-globalProductList.createProduct(b);
-globalProductList.createProduct(c);
-globalProductList.createProduct(d);
-globalProductList.createProduct(e);
 
-function show(coso){
-    console.table(coso.productArray);
-}
-*/

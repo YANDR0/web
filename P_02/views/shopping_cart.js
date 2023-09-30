@@ -102,22 +102,22 @@ class ShoppingCart{
 
     calculateTotal(){
         let total = 0;
-        for (let i = 0; i < this.arrProxys.length; i++) {
+        for (let i = 0; i < this.arrProxys.length; i++)
             total += this.arrProducts[i].pricePerUnit * this.arrProxys[i].quantity;
-        }
         return total;
+    }
+
+    //SHOW
+    showProxys(){
+        console.table(coso.arrProxys);
+    }
+
+    showProducts(){
+        console.table(coso.arrProducts);
     }
 
 }
 
 
-/*
-let coso = new ShoppingCart();
 
-
-function imprimir(coso){
-    console.table(coso.arrProxys);
-    console.table(coso.arrProducts);
-}
-*/
 
