@@ -107,15 +107,6 @@ class ShoppingCart{
         return total;
     }
 
-    //SHOW
-    showProxys(){
-        console.table(coso.arrProxys);
-    }
-
-    showProducts(){
-        console.table(coso.arrProducts);
-    }
-
 }
 
 
