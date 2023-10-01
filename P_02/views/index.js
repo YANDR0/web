@@ -1,4 +1,4 @@
-
+/*
 console.log("\n\n\n<<< ---------- DATA HANDLER ---------- >>>\n\n\n");
 
 
@@ -147,3 +147,4 @@ console.table(shop.getArrProduct);
 console.log("\n\n<<< ---------- TOTAL DE COMPRA ---------- >>>\n\n");
 console.log(shop.calculateTotal());
 
+*/

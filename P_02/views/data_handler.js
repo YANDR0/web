@@ -74,11 +74,6 @@ class ProductList{
         return result;
     }
 
-    //SHOW
-    show(){
-        console.table(this.productArray);
-    }
-
 }
 
 // GLOBAL LIST
