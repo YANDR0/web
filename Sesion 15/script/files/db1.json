@@ -1,0 +1,50 @@
+{
+    "users": [
+        {
+            "id": 1,
+            "name" : "Pedro",
+            "email": "pedrito_el_crack@gmail.com",
+            "edad": 25,
+            "sexo": "H"
+        },
+        {
+            "id": 2,
+            "name" : "Ramona",
+            "email": "ramona_flowers@gmail.com",
+            "edad": 22,
+            "sexo": "M"
+        },
+        {
+            "id": 3,
+            "name" : "Juanito",
+            "email": "juan@gmail.com",
+            "edad": 12,
+            "sexo": "Sí por favor"
+        }
+    ],
+    "products": [
+        {
+            "id": 1,
+            "name": "Producto 1",
+            "sku": "PROD-1",
+            "price": 12
+        },
+        {
+            "id": 2,
+            "name": "Producto 2",
+            "sku": "PROD-2",
+            "price": 33
+        }
+    ],
+    "banks": [
+        {
+            "id": 1,
+            "name": "banco 1"
+        },
+        {
+            "id": 2,
+            "name": "banco 2"
+        }
+    ]
+
+}
