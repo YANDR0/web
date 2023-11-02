@@ -15,4 +15,4 @@ db.on('connected', () => {
     console.log(mongoose.connection.readyState);
 });
 
-mongoose.connect(mongoConnection, {useNewUrlParser: true});
+mongoose.connect(mongoConnection, {useNewUrlParser: true}); 
