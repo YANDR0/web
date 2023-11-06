@@ -1,0 +1,310 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>Title</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <script src="https://kit.fontawesome.com/23372e7b7a.js" crossorigin="anonymous"></script>
+
+  <!-- Bootstrap CSS v5.2.1 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+  <!-- EL POP UP O MODAL -->
+  <div class="modal fade" id="modal_1" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false" role="dialog" aria-labelledby="modalTitleId" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-sm" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalTitleId">Iniciar sesión</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                Correo
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control Required" placeholder="Ingresa tu correo">
+                    <div class="input-group-append">
+                        <span class="input-group-text"><i class="fa-solid fa-user"></i></span>
+                    </div>
+                </div>
+                Contraseña
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control Required" placeholder="Ingresa tu contraseña">
+                    <div class="input-group-append">
+                        <span class="input-group-text"><i class="fa-solid fa-lock"></i></span>
+                    </div>
+                </div>
+                
+                <div style="text-align: center;"> <button type="submit" class="btn btn-primary">Login</button> </div>
+                
+            </div>
+            <div class="modal-footer">
+                ¿No tienes cuenta?<a href="" data-bs-toggle="modal" data-bs-target="#modal_2">Registrate aquí</a>
+            </div>
+        </div>
+    </div>
+  </div>
+
+  <!-- EL OTRO MODAL -->
+  <div class="modal fade" id="modal_2" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false" role="dialog" aria-labelledby="modalTitleId" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-sm" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalTitleId">Registrarse</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-6 mb-3">
+                            <input type="text" class="form-control Required" placeholder="Nombre(s)">
+                        </div>
+                        <div class="col-6 mb-3">
+                            <input type="text" class="form-control Required" placeholder="Apellidos">
+                        </div>
+                        <div class="col-12 mb-3">
+                            <input type="text" class="form-control Required" placeholder="Tu correo">
+                        </div>
+                        <div class="col-12 mb-3">
+                            <input type="text" class="form-control Required" placeholder="Contraseña">
+                        </div>
+                        <div class="col-12 mb-3">
+                            <input type="text" class="form-control Required" placeholder="Confirmar contraseña">
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-success" data-bs-dismiss="modal">Registrarse</button>
+
+            </div>
+        </div>
+    </div>
+  </div>
+
+</head>
+
+<body>
+  <header>
+
+    <script src="../views/utils.js"></script>
+    <script src="../views/product.js"></script>
+    <script src="../views/data_handler.js"></script>
+    <script src="../views/shopping_cart.js"></script>
+    <script src="../views/index.js"></script>
+
+    <!--BARRA DE ARRIBA-->
+    <nav class="navbar navbar-expand-sm navbar-light bg-light">
+          <div class="container">
+            <a class="navbar-brand" href="P01_index.html"><img src="logo.png" alt="logo" height="60px" width="60px"></a>
+            <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId"
+                aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="collapsibleNavId">
+                <ul class="navbar-nav me-auto mt-2 mt-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="P01_index.html" aria-current="page">Inicio <span class="visually-hidden">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="P01_about_us.html">Sobre nosotros</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Productos</a>
+                        <div class="dropdown-menu" aria-labelledby="dropdownId">
+                            <a class="dropdown-item" href="P01_cat_A.html">Categoría A</a>
+                            <a class="dropdown-item" href="P01_cat_B.html">Categoría B</a>
+                        </div>
+                    </li>
+                    <li>
+                        <form class="d-flex my-2 my-lg-0" >
+                            <input class="form-control me-sm-2" type="text" placeholder="Buscar productos...">
+                            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
+                        </form>
+                    </li>
+                </ul>
+
+                <ul class="navbar-nav" >
+                    <li><a class="nav-link" href="" style="color: black" data-bs-toggle="modal" data-bs-target="#modal_1"><i class="fa-solid fa-user"></i>Ingresar</a></li>
+                    <li><a class="nav-link" href="P01_cart.html" style="color: black"> <i class="fa-solid fa-cart-shopping"></i></a></li>
+                </ul>            
+                
+            </div>
+      </div>
+    </nav>
+
+    <!--CARRUSEL-->
+    <div id="carouselId" class="carousel slide" data-bs-ride="carousel" style="align-items: center;">
+        <ol class="carousel-indicators">
+            <li data-bs-target="#carouselId" data-bs-slide-to="0" class="active" aria-current="true" aria-label="First slide"></li>
+            <li data-bs-target="#carouselId" data-bs-slide-to="1" aria-label="Second slide"></li>
+            <li data-bs-target="#carouselId" data-bs-slide-to="2" aria-label="Third slide"></li>
+        </ol>
+        <div class="carousel-inner" role="listbox">
+            <div class="carousel-item active">
+                <img src="https://video-images.vice.com/_uncategorized/1539801133834-44243057_904869233046666_4625200910413332480_n.jpeg" class="w-100 d-block" alt="First slide" height="350px">
+            </div>
+            <div class="carousel-item">
+                <img src="https://i.pinimg.com/originals/60/f4/ec/60f4ec552dfa76da175587871cf98c1b.jpg" class="w-100 d-block" alt="Second slide" height="350px">
+            </div>
+            <div class="carousel-item">
+                <img src="https://scontent.fgdl5-2.fna.fbcdn.net/v/t1.6435-9/43354235_1088365941311418_1003111610803290112_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=0debeb&_nc_ohc=30-9xOuw7FQAX-NPeJG&_nc_ht=scontent.fgdl5-2.fna&oh=00_AfADvO8q8DAwMMWI8lA_rHI6WkKyZYcJtX3ypZS_ZF-f1Q&oe=6525CDD4" class="w-100 d-block" alt="Third slide" height="350px">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselId" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselId" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+    
+  </header>
+  <main>
+
+    <br>
+    <!--MONTÓN DE TARJETAS-->
+    <div class="container">
+        <div class="row gy-3">
+            <div class="col-lg-3 col-md-4 col-6 d-flex">
+                <div class="card">
+                    <img class="card-img-top" style="height: 200px" src="peru.jpg" alt="Title">
+                    <div class="card-body">
+                        <h4 class="card-title">Perucetus</h4>
+                        <p class="card-text">Todo gordo, todo watón, demasiado de hecho</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-6 d-flex" >
+                <div class="card">
+                    <img class="card-img-top" style="height: 200px"  src="https://images.wikidexcdn.net/mwuploads/wikidex/7/7a/latest/20220313073246/Dragapult.png" alt="Title" >
+                    <div class="card-body">
+                        <h4 class="card-title">Diplocaulus</h4>
+                        <p class="card-text">El csm no se quiso extinguir y que renace a la fuerza</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-6 d-flex">
+                <div class="card">
+                    <img class="card-img-top" style="height: 200px" src="https://static.wikia.nocookie.net/f701bd9c-b5dd-4614-b756-93f4c40a0c32/scale-to-width/755" alt="Title" >
+                    <div class="card-body">
+                        <h4 class="card-title">Hatzegopteryx</h4>
+                        <p class="card-text">Mantener alejado de bebes, eso come por flojo</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-6 d-flex">
+                <div class="card">
+                    <img class="card-img-top" style="height: 200px;" src="https://images3.memedroid.com/images/UPLOADED342/6247d5c383e7f.jpeg" alt="Title">
+                    <div class="card-body">
+                        <h4 class="card-title">Anomalocaris</h4>
+                        <p class="card-text">Máximo depredador de su tiempo, tiene escoliosis</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-6 d-flex">
+                <div class="card">
+                    <img class="card-img-top" style="height: 200px;" src="https://i.kym-cdn.com/photos/images/newsfeed/002/374/215/6b6.jpg" alt="Title" >
+                    <div class="card-body">
+                        <h4 class="card-title">Beelzebufo</h4>
+                        <p class="card-text">Este también come niños, pero normalmente está calmao</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-6 d-flex">
+                <div class="card">
+                    <img class="card-img-top" style="height: 200px;" src="https://static01.nyt.com/images/2022/05/03/science/00sci-tiktaalik-fossil1-esp-1/00sci-tiktaalik-fossil1-videoSixteenByNineJumbo1600.jpg" alt="Title" >
+                    <div class="card-body">
+                        <h4 class="card-title">Tiktaalik</h4>
+                        <p class="card-text">Enemigo número 1 de la onu, amenaza internacional, caja de pandora, fuente de todos los males, debe ser detenido cuanto antes</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-6 d-flex">
+                <div class="card">
+                    <img class="card-img-top" style="height: 200px;" src="https://i.kym-cdn.com/photos/images/newsfeed/002/343/063/7ca.png" alt="Title">
+                    <div class="card-body">
+                        <h4 class="card-title">Tyrannosaurus rex</h4>
+                        <p class="card-text">Gran padre mejor dinosaurio, un grande el Hank, finalmente un rex que parece animal</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-6 d-flex">
+                <div class="card">
+                    <img class="card-img-top" style="height: 200px;" src="https://pbs.twimg.com/media/FT0iHj_WUAAtjJr.jpg" alt="Title" >
+                    <div class="card-body">
+                        <h4 class="card-title">Triceratops</h4>
+                        <p class="card-text">Tiene cara de pez globo por alguna razón, de grande se compone supongo</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-6 d-flex">
+                <div class="card">
+                    <img class="card-img-top" style="height: 200px;" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Kasu%C3%A1r_p%C5%99ilbov%C3%BD.jpg/1200px-Kasu%C3%A1r_p%C5%99ilbov%C3%BD.jpg" alt="Title" >
+                    <div class="card-body">
+                        <h4 class="card-title">Casuario</h4>
+                        <p class="card-text">Efectivamente, esto es un dinosaurio, su sola presencia aterra a las masas</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-6 d-flex">
+                <div class="card">
+                    <img class="card-img-top" style="height: 200px;" src="https://i.kym-cdn.com/photos/images/original/002/390/896/ba3.jpeg" alt="Title" >
+                    <div class="card-body">
+                        <h4 class="card-title">Carnotaurus</h4>
+                        <p class="card-text">Que gran danza de cortejo, todo un macho alfa, todo un conquistador, ojala lo logre</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-6 d-flex">
+                <div class="card">
+                    <img class="card-img-top" style="height: 200px;" src="https://i.kym-cdn.com/photos/images/original/002/650/231/3cc.jpg" alt="Title" >
+                    <div class="card-body">
+                        <h4 class="card-title">Spinosaurus</h4>
+                        <p class="card-text">Nomás no se queda quieto, día que pasa, día en que le hacen otra mugre reconstrucción</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-6 d-flex">
+                <div class="card">
+                    <img class="card-img-top" style="height: 200px;" src="https://cdn.sci.news/images/enlarge6/image_7170e-Ambopteryx-longibrachium.jpg" alt="Title" >
+                    <div class="card-body">
+                        <h4 class="card-title">Ambopteryx</h4>
+                        <p class="card-text">Esta cosa pudo haber evolucionado en un dragón pero no quiso</p>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+    <br>
+    <!--NÚMEROS DE ABAJO-->
+    <ul class="pagination justify-content-center">
+        <li class="page-item active"><a class="page-link" href="">1</a></li>
+        <li class="page-item"><a class="page-link" href="P01_cat_A.html">2</a></li>
+        <li class="page-item"><a class="page-link" href="P01_cat_B.html">3</a></li>
+        <li class="page-item"><a class="page-link" href="P01_cat_A.html">>></a></li>
+    </ul>
+
+    
+  </main>
+  
+  <footer>
+    <!-- place footer here -->
+  </footer>
+  <!-- Bootstrap JavaScript Libraries -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+    integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
+  </script>
+</body>
+
+</html>

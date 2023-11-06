@@ -1,0 +1,132 @@
+[
+    {
+        "uuid": "264d1343-74b5-42eb-a069-e6fc593961b8",
+        "title": "Perucetus",
+        "description": "Todo gordo, todo watón, demasiado de hecho",
+        "imageUrl": "https://i.imgur.com/eMVU8ks.jpeg",
+        "unit": "Manada",
+        "stock": 3,
+        "pricePerUnit": 5020,
+        "category": "Mamífero"
+    },
+    {
+        "uuid": "507f9bf0-f7c2-47cd-809f-6d44dd8987f0",
+        "title": "Diplocaulus",
+        "description": "El csm no se quiso extinguir y que renace a la fuerza",
+        "imageUrl": "https://images.wikidexcdn.net/mwuploads/wikidex/7/7a/latest/20220313073246/Dragapult.png",
+        "unit": "Individuo",
+        "stock": 21,
+        "pricePerUnit": 250,
+        "category": "Tetrápodo"
+    },
+    {
+        "uuid": "b0b4d048-8e0a-495b-b111-e1e4ec6954a2",
+        "title": "Hatzegopteryx",
+        "description": "Mantener alejado de bebes, eso come por flojo",
+        "imageUrl": "https://static.wikia.nocookie.net/f701bd9c-b5dd-4614-b756-93f4c40a0c32/scale-to-width/755",
+        "unit": "Pareja",
+        "stock": 5,
+        "pricePerUnit": 820,
+        "category": "Pterosaurio"
+    },
+    {
+        "uuid": "5880bb73-bbcf-4e51-8256-5c351ddcb617",
+        "title": "Anomalocaris",
+        "description": "Máximo depredador de su tiempo, tiene escoliosis",
+        "imageUrl": "https://images3.memedroid.com/images/UPLOADED342/6247d5c383e7f.jpeg",
+        "unit": "Individuo",
+        "stock": 16,
+        "pricePerUnit": 105,
+        "category": "Artrópodo"
+    },
+    {
+        "uuid": "ee554888-f8e3-4a02-9786-dec87f32c9f0",
+        "title": "Beelzebufo",
+        "description": "Este también come niños, pero normalmente está calmao",
+        "imageUrl": "https://i.kym-cdn.com/photos/images/newsfeed/002/374/215/6b6.jpg",
+        "unit": "Individuo",
+        "stock": 55,
+        "pricePerUnit": 35,
+        "category": "Tetrápodo"
+    },
+    {
+        "uuid": "47a55d1b-1257-46e0-830a-32d4cf9dccf1",
+        "title": "Tiktaalik",
+        "description": "Enemigo número 1 de la onu, amenaza internacional, caja de pandora, fuente de todos los males, debe ser detenido cuanto antes",
+        "imageUrl": "https://static01.nyt.com/images/2022/05/03/science/00sci-tiktaalik-fossil1-esp-1/00sci-tiktaalik-fossil1-videoSixteenByNineJumbo1600.jpg",
+        "unit": "Individuo",
+        "stock": 37,
+        "pricePerUnit": 95,
+        "category": "Tetrápodo"
+    },
+    {
+        "uuid": "7cc680d2-0bcf-454d-9f2b-56233d9c2f82",
+        "title": "Tyrannosaurus rex",
+        "description": "Gran padre mejor dinosaurio, un grande el Hank, finalmente un rex que parece animal",
+        "imageUrl": "https://i.kym-cdn.com/photos/images/newsfeed/002/343/063/7ca.png",
+        "unit": "Pareja",
+        "stock": 2,
+        "pricePerUnit": 3824,
+        "category": "Terópodo"
+    },
+    {
+        "uuid": "3b3ec166-7cc5-430d-bc4f-10baf7286d05",
+        "title": "Triceratops",
+        "description": "Tiene cara de pez globo por alguna razón, de grande se compone supongo",
+        "imageUrl": "https://pbs.twimg.com/media/FT0iHj_WUAAtjJr.jpg",
+        "unit": "Manada",
+        "stock": 6,
+        "pricePerUnit": 4502,
+        "category": "Ornitisquio"
+    },
+    {
+        "uuid": "2f3ed6ac-45d3-487f-a0d7-f732d45fff1c",
+        "title": "Casuario",
+        "description": "Efectivamente, esto es un dinosaurio, su sola presencia aterra a las masas",
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Kasu%C3%A1r_p%C5%99ilbov%C3%BD.jpg/1200px-Kasu%C3%A1r_p%C5%99ilbov%C3%BD.jpg",
+        "unit": "Individuo",
+        "stock": 21,
+        "pricePerUnit": 210,
+        "category": "Maniraptor"
+    },
+    {
+        "uuid": "3ea0422e-09a7-4c66-b0ea-5be5e94eb0cc",
+        "title": "Carnotaurus",
+        "description": "Que gran danza de cortejo, todo un macho alfa, todo un conquistador, ojala lo logre",
+        "imageUrl": "https://i.kym-cdn.com/photos/images/original/002/390/896/ba3.jpeg",
+        "unit": "Individuo",
+        "stock": 7,
+        "pricePerUnit": 280,
+        "category": "Terópodo"
+    },
+    {
+        "uuid": "65495cae-4728-4eee-bcd1-adce60a65aa6",
+        "title": "Spinosaurus",
+        "description": "Nomás no se queda quieto, día que pasa, día en que le hacen otra mugre reconstrucción",
+        "imageUrl": "https://i.kym-cdn.com/photos/images/original/002/650/231/3cc.jpg",
+        "unit": "Individuo",
+        "stock": 13,
+        "pricePerUnit": 375,
+        "category": "Terópodo"
+    },
+    {
+        "uuid": "bc0479a0-0dcd-48ad-96a1-7192e645ecc4",
+        "title": "Un animal",
+        "description": "Prueba",
+        "imageUrl": "Prueba",
+        "unit": "Prueba",
+        "stock": 0,
+        "pricePerUnit": 0,
+        "category": "Prueba"
+    },
+    {
+        "uuid": "6a7babda-14f6-4529-b260-e09f1e28efe1",
+        "title": "Otro animal",
+        "description": "Prueba",
+        "imageUrl": "Prueba",
+        "unit": "Prueba",
+        "stock": 0,
+        "pricePerUnit": 0,
+        "category": "Prueba"
+    }
+]

@@ -1,0 +1,23 @@
+[
+   {
+    "id": 1,
+    "name": "Pedro",
+    "emal": "pedro@gmail.com",
+    "edad": 25,
+    "sexo": "Cuando quieras"
+    },
+    {
+    "id": 2,
+    "name": "Romana",
+    "emal": "Romana@gmail.com",
+    "edad": 21,
+    "sexo": "F"
+    },
+    {
+    "id": 3,
+    "name": "Juanito",
+    "emal": "juan@gmail.com",
+    "edad": 12,
+    "sexo": "M"
+    }
+]

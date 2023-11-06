@@ -1,0 +1,91 @@
+
+### GET products                          
+GET http://localhost:3000/
+
+### GET products                          
+GET http://localhost:3000/home
+
+### GET products                          
+GET http://localhost:3000/shopping_cart
+
+#######################################################################################
+
+### GET products                    Ver todos los productos       
+GET http://localhost:3000/products/
+
+### POST products/cart              Ver los productos enlistados
+POST http://localhost:3000/products/cart
+content-type: application/json
+
+[
+    { "uuid": "7cc680d2-0bcf-454d-9f2b-56233d9c2f82" },            
+    { "uuid": "3b3ec166-7cc5-430d-bc4f-10baf7286d05" }             
+]
+
+### GET products/:id                Ver solo un producto                      
+GET http://localhost:3000/products/264d1343-74b5-42eb-a069-e6fc593961b8
+
+#######################################################################################
+
+### POST admin/products             Sin autentificación
+POST http://localhost:3000/admin/products
+content-type: application/json
+    
+{
+    "title": "Ambopteryx",
+    "description": "Esta cosa pudo haber evolucionado en un dragón pero no quiso",
+    "imageUrl": "https://cdn.sci.news/images/enlarge6/image_7170e-Ambopteryx-longibrachium.jpg",
+    "unit": "Manada",
+    "stock": 27,
+    "pricePerUnit": 175,
+    "category": "Maniraptor"
+}
+
+### POST admin/products             Añadir un producto
+POST http://localhost:3000/admin/products
+content-type: application/json
+x-auth: admin
+    
+{
+    "title": "Ambopteryx",
+    "description": "Esta cosa pudo haber evolucionado en un dragón pero no quiso",
+    "imageUrl": "https://cdn.sci.news/images/enlarge6/image_7170e-Ambopteryx-longibrachium.jpg",
+    "unit": "Manada",
+    "stock": 27,
+    "pricePerUnit": 175,
+    "category": "Maniraptor"
+}
+
+
+### PUT admin/products/:id          Sin autentificación             
+PUT http://localhost:3000/admin/products/bc0479a0-0dcd-48ad-96a1-7192e645ecc4
+content-type: application/json
+
+{
+    "title": "Animal detrás de la cortina numero 3",
+    "description": "Allí dice, es el de la cortina 3, pa catafixear",
+    "imageUrl": "Aquí va un link pero que flojera"
+}
+
+### PUT admin/products/:id          Modificar un producto               
+PUT http://localhost:3000/admin/products/bc0479a0-0dcd-48ad-96a1-7192e645ecc4
+content-type: application/json
+x-auth: admin
+
+{
+    "title": "Animal detrás de la cortina numero 3",
+    "description": "Allí dice, es el de la cortina 3, pa catafixear",
+    "imageUrl": "Aquí va un link pero que flojera"
+}
+
+
+### DELETE /admin/products/:id           Sin autentificación                
+DELETE http://localhost:3000/admin/products/6a7babda-14f6-4529-b260-e09f1e28efe1
+content-type: application/json
+
+### DELETE /admin/products/:id          Eliminar un producto              
+DELETE http://localhost:3000/admin/products/6a7babda-14f6-4529-b260-e09f1e28efe1
+content-type: application/json
+x-auth: admin
+
+

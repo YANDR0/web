@@ -1,0 +1,34 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Manzana",
+      "price": 23,
+      "category": "Fruta"
+    },
+    {
+      "id": 2,
+      "name": "Brócoli",
+      "price": 37,
+      "category": "Verdura"
+    },
+    {
+      "id": 3,
+      "name": "Aguacate",
+      "price": 100,
+      "category": "Fruta"
+    },
+    {
+      "id": 4,
+      "name": "Jitomate",
+      "price": 18,
+      "category": "Fruta"
+    },
+    {
+      "id": 5,
+      "name": "Papa",
+      "price": 45,
+      "category": "Verdura"
+    }
+  ]
+}
