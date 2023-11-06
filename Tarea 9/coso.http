@@ -1,0 +1,12 @@
+
+### Añadir Json a base
+POST http://localhost:3000/api/users
+content-type: application/json
+
+{
+    "nombre": "Un verdadero usuario",
+    "correo": "correo.veridico@gmail.com",
+    "pass": "textomuytestoso",
+    "edad": 100,
+    "sexo": "M"
+}

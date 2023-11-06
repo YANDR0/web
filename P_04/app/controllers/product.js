@@ -1,0 +1,128 @@
+const utils = require('./utils');
+
+class ProductExeption {
+    constructor(error){
+        this.errorMessage = error;
+    }
+}
+
+
+class Product {
+
+    // CONSTRUCTOR
+    constructor(name = "No name", text = "No description", image = "No image", size = "No size", quantity = 0, price = 0, type = "No type"){
+        this.uuid = utils.generateUUID();
+        this.title = name;
+        this.description = text;
+        this.imageUrl = image;
+        this.unit = size;
+        this.stock = quantity;
+        this.pricePerUnit = price;
+        this.category = type;
+    }
+
+    //SETTERS
+    set setUuid(value){
+        throw new ProductExeption("Products uuids are auto-generated.");
+    }
+
+    set setTitle(value){
+        utils.checkString(value);
+        this.title = value;
+    }
+
+    set setDescription(value){
+        utils.checkString(value);
+        this.description = value;
+    }
+
+    set setImageUrl(value){
+        utils.checkString(value);
+        this.imageUrl = value;
+    }
+
+    set setUnit(value){
+        utils.checkString(value);
+        this.unit = value;
+    }
+
+    set setStock(value){
+        utils.checkNumber(value);
+        this.stock = value;
+    }
+
+    set setPricePerUnit(value){
+        utils.checkNumber(value);
+        this.pricePerUnit = value;
+    }
+
+    set setCategory(value){
+        utils.checkString(value);
+        this.category = value;
+    }
+
+    //GETTERS
+
+    get getUuid(){
+        return this.uuid;
+    }
+
+    get getTitle(){
+        return this.title;
+    }
+
+    get getDescription(){
+        return this.description;
+    }
+
+    get getImageUrl(){
+        return this.imageUrl;
+    }
+
+    get getUnit(){
+        return this.unit;
+    }
+
+    get getStock(){
+        return this.stock;
+    }
+
+    get getPricePerUnit(){
+        return this.pricePerUnit;
+    }
+
+    get getCategory(){
+        return this.category;
+    }
+
+    //FUNCTIONS
+
+    static createFromJson(jsonValue){
+        let result = JSON.parse(jsonValue);
+        if (typeof (result) !== 'object') return new Product();
+        return this.createFromObject(result);
+    }
+
+    static createFromObject(obj){
+        let result = new Product();
+        let new_obj = this.cleanObject(obj);
+        for(const key in result){
+            if(new_obj[key])
+                result[key] = new_obj[key];
+        }
+        return result;   
+    }
+
+    static cleanObject(obj){
+        let list = Object.keys(new Product());
+        for(const key in obj) {
+            if(!list.includes(key)) 
+                delete obj[key];
+        }
+        return obj;
+    }
+}
+
+
+
+module.exports = Product;
