@@ -1,0 +1,24 @@
+
+### Añadir Json a base
+POST http://localhost:3000/api/users?nombre=Juan
+
+
+###
+PUT http://localhost:3000/api/users
+Content-Type: application/json
+
+{
+    "id": "6540341315bc5d962df66724",
+    "nombre": "AAAAAAAAAA",
+    "correo": "hola.adios@xd.com",
+    "edad": 10000
+}
+
+
+###
+DELETE http://localhost:3000/api/users
+Content-Type: application/json
+
+{
+    "id": "6548ed9eaf034b5ed8b3a022"
+}
