@@ -1,10 +1,17 @@
 
 ### Añadir Json a base
-POST http://localhost:3000/api/users?nombre=Juan
+POST http://localhost:3000/
+Content-Type: application/json
 
+{
+    "nombre": "AAAAAAAAAA",
+    "correo": "hola.adios@xd.com",
+    "pass": "10000",
+    "phone": "1234567"
+}
 
 ###
-PUT http://localhost:3000/api/users
+PUT http://localhost:3000/
 Content-Type: application/json
 
 {
@@ -16,7 +23,7 @@ Content-Type: application/json
 
 
 ###
-DELETE http://localhost:3000/api/users
+DELETE http://localhost:3000/
 Content-Type: application/json
 
 {

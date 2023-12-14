@@ -84,6 +84,11 @@ let num = document.getElementById("amountProduct");
 document.getElementById("addToCart").addEventListener("click", () => {
     let cart = JSON.parse(sessionStorage.getItem("car"));
     let quantity = num.value;
+    if(quantity <= 0){
+        num.value = 1;
+        alert("No se aceptan negativos o 0");
+        return;
+    }
     let order = {uuid: iden, q: quantity};
 
     let index = cart.findIndex(e => e.uuid == iden);

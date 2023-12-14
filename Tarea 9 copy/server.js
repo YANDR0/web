@@ -5,7 +5,7 @@ const express = require("express");
 const app = express();
 const port = 3000;
 
-let mongoConnection = "mongodb+srv://admin:Parangaricutirimicuaro01@myapp.j2ikbis.mongodb.net/MyApp";
+let mongoConnection = "mongodb+srv://admin:Parangaricutirimicuaro01@myapp.j2ikbis.mongodb.net/BasesNoRelacionales";
     let db = mongoose.connection;
 
 db.on('connecting', () => {
@@ -21,32 +21,17 @@ db.on('connected', () => {
 
 mongoose.connect(mongoConnection, {useNewUrlParser: true});
 let userSchema = mongoose.Schema({
-    nombre: {
+    origin: {
         type: String,
         required: true
     },
-    correo: {
-        type: String,
-        required: true
-    },
-    pass: {
-        type: String,
-        required: true
-    },
-    edad: {
-        type: String,
-        min: 0, 
-        max: 120,
-        required: true
-    },
-    sexo: {
-        type: String,
-        enum: ["H", "M"],
+    connection: {
+        type: Boolean,
         required: true
     }
 });
 
-let User = mongoose.model("users", userSchema);
+let User = mongoose.model("flights", userSchema);
 
 app.use(express.json())
 
@@ -54,7 +39,13 @@ app.use(cors({
     methods: ['GET', 'POST', 'DELETE', 'UPDATE', 'PUT', 'PATCH']
 }));
 
-app.put('/api/users', (req, res) => {
+app.post('/', (req, res) => {
+    let user = User(req.body);
+    user.save().then((doc) => console.log(("Usuario creado: " + doc)));
+    res.send(user);
+})
+
+app.put('/', (req, res) => {
     console.log("Actualizando ando");
     let id = req.body.id,
         nombre = req.body.nombre,
@@ -90,7 +81,7 @@ app.put('/api/users', (req, res) => {
     }
 })
 
-app.get("/api/users"), (req, res) => {
+app.get("/"), (req, res) => {
     let xd = req.query.nombre;
 
     User.find({
@@ -101,7 +92,7 @@ app.get("/api/users"), (req, res) => {
     }).catch((err) => console.log(err));
 }
 
-app.delete('/api/users', (req, res) => {
+app.delete('/', (req, res) => {
     console.log("Registro eliminado");
     let id = req.body.id;
 
